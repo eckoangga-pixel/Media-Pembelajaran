@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelajah Peta Indonesia - IPAS Kelas 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="brand">
+        <div class="brand-icon">🌏</div>
+        <div>
+            <h1>Jelajah Indonesia</h1>
+            <p>Media Pembelajaran IPAS Kelas 5</p>
+        </div>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</header>
+
+<div class="layout">
+
+<nav class="sidebar" id="sidebar">
+    <div class="nav-title">MENU PEMBELAJARAN</div>
+
+    <button class="nav-btn active" onclick="showPage('home',this)">🏠 Beranda</button>
+    <button class="nav-btn" onclick="showPage('tujuan',this)">🎯 Tujuan Pembelajaran</button>
+    <button class="nav-btn" onclick="showPage('peta',this)">🗺️ Jelajah Peta</button>
+    <button class="nav-btn" onclick="showPage('daratan',this)">🏝️ Daratan & Lautan</button>
+    <button class="nav-btn" onclick="showPage('khatulistiwa',this)">🌞 Garis Khatulistiwa</button>
+    <button class="nav-btn" onclick="showPage('maritim',this)">🚢 Negara Maritim</button>
+    <button class="nav-btn" onclick="showPage('agraris',this)">🌾 Negara Agraris</button>
+    <button class="nav-btn" onclick="showPage('game',this)">🎮 Game Interaktif</button>
+    <button class="nav-btn" onclick="showPage('kuis',this)">📝 Kuis Evaluasi</button>
+    <button class="nav-btn" onclick="showPage('refleksi',this)">💭 Refleksi</button>
+
+    <div class="sidebar-footer">
+        <span>⭐ Belajar sambil bermain!</span>
+        <p>Indonesia Kaya dan Beragam</p>
+    </div>
+</nav>
+
+<main class="content">
+
+<!-- BERANDA -->
+<section class="page active" id="home">
+    <div class="hero">
+        <div class="hero-text">
+            <span class="tag">IPAS KELAS 5 • BAB 1</span>
+            <h2>Halo, Penjelajah Cilik! 👋</h2>
+            <p>
+                Ayo mengenal keindahan Indonesia! Jelajahi pulau,
+                lautan, garis khatulistiwa, serta kehidupan masyarakat
+                maritim dan agraris.
+            </p>
+            <button class="primary-btn" onclick="showPage('peta')">
+                Mulai Petualangan 🚀
+            </button>
+        </div>
+        <div class="hero-art">🇮🇩<br>🏝️🌊</div>
+    </div>
+
+    <h2 class="section-heading">Petualangan Belajar Hari Ini</h2>
+
+    <div class="card-grid">
+        <div class="feature-card orange" onclick="showPage('peta')">
+            <div class="feature-icon">🗺️</div>
+            <h3>Jelajah Peta</h3>
+            <p>Kenali pulau dan wilayah perairan Indonesia.</p>
+        </div>
+
+        <div class="feature-card blue" onclick="showPage('khatulistiwa')">
+            <div class="feature-icon">🌞</div>
+            <h3>Garis Khatulistiwa</h3>
+            <p>Pelajari posisi Indonesia di bumi.</p>
+        </div>
+
+        <div class="feature-card green" onclick="showPage('maritim')">
+            <div class="feature-icon">🚢</div>
+            <h3>Negara Maritim</h3>
+            <p>Kenali kehidupan masyarakat pesisir dan laut.</p>
+        </div>
+
+        <div class="feature-card yellow" onclick="showPage('agraris')">
+            <div class="feature-icon">🌾</div>
+            <h3>Negara Agraris</h3>
+            <p>Pelajari kegiatan pertanian Indonesia.</p>
+        </div>
+    </div>
+
+    <div class="info-banner">
+        <h3>💡 Tantangan Hari Ini</h3>
+        <p>
+            Bisakah kalian menemukan dan menunjukkan wilayah daratan
+            serta lautan Indonesia pada peta digital?
+        </p>
+    </div>
+</section>
+
+<!-- TUJUAN -->
+<section class="page" id="tujuan">
+    <h2 class="page-title">🎯 Tujuan Pembelajaran</h2>
+    <p class="subtitle">Setelah mengikuti pembelajaran, murid diharapkan mampu:</p>
+
+    <div class="learning-list">
+        <div class="learning-item">
+            <span>01</span>
+            <p>Mengidentifikasi wilayah daratan dan lautan Indonesia berdasarkan peta.</p>
+        </div>
+        <div class="learning-item">
+            <span>02</span>
+            <p>Menjelaskan posisi Indonesia dan garis khatulistiwa.</p>
+        </div>
+        <div class="learning-item">
+            <span>03</span>
+            <p>Menjelaskan karakteristik Indonesia sebagai negara maritim dan agraris.</p>
+        </div>
+        <div class="learning-item">
+            <span>04</span>
+            <p>Menyajikan hasil analisis dalam bentuk poster atau infografis digital.</p>
+        </div>
+        <div class="learning-item">
+            <span>05</span>
+            <p>Bekerja sama dalam kelompok dengan pembagian tugas yang bertanggung jawab.</p>
+        </div>
+    </div>
+
+    <div class="info-banner">
+        <h3>🌟 Pembelajaran Mendalam</h3>
+        <p>Memahami → Mengaplikasi → Merefleksi</p>
+        <p>Belajar aktif, bekerja sama, menggunakan teknologi secara bijak, dan menghasilkan karya.</p>
+    </div>
+</section>
+
+<!-- PETA -->
+<section class="page" id="peta">
+    <h2 class="page-title">🗺️ Jelajah Peta Indonesia</h2>
+    <p class="subtitle">Klik salah satu pulau untuk mengenal wilayah Indonesia.</p>
+
+    <div class="map-card">
+        <div class="map-legend">
+            <span><i class="legend land"></i> Daratan</span>
+            <span><i class="legend sea"></i> Lautan</span>
+            <span><i class="legend equator"></i> Khatulistiwa</span>
+        </div>
+
+        <div class="map-area">
+            <div class="sea-label">SAMUDRA HINDIA</div>
+            <div class="sea-label sea-right">SAMUDRA PASIFIK</div>
+
+            <div class="equator-line">
+                <span>GARIS KHATULISTIWA</span>
+            </div>
+
+            <button class="island sumatra" onclick="showIsland('sumatra')">Sumatra</button>
+            <button class="island jawa" onclick="showIsland('jawa')">Jawa</button>
+            <button class="island kalimantan" onclick="showIsland('kalimantan')">Kalimantan</button>
+            <button class="island sulawesi" onclick="showIsland('sulawesi')">Sulawesi</button>
+            <button class="island papua" onclick="showIsland('papua')">Papua</button>
+            <button class="island bali" onclick="showIsland('bali')">Bali</button>
+            <button class="island maluku" onclick="showIsland('maluku')">Maluku</button>
+            <button class="island nusa" onclick="showIsland('nusa')">Nusa Tenggara</button>
+        </div>
+
+        <div class="map-note">
+            <strong>📍 Informasi Pulau</strong>
+            <p id="islandInfo">Pilih salah satu pulau pada peta untuk melihat informasinya.</p>
+        </div>
+    </div>
+
+    <div class="info-banner">
+        <h3>🔎 Amati Peta!</h3>
+        <p>Indonesia merupakan negara kepulauan yang memiliki wilayah daratan dan perairan yang luas.</p>
+    </div>
+</section>
+
+<!-- DARATAN LAUTAN -->
+<section class="page" id="daratan">
+    <h2 class="page-title">🏝️ Daratan dan Lautan Indonesia</h2>
+    <p class="subtitle">Kenali perbedaan wilayah daratan dan perairan.</p>
+
+    <div class="two-column">
+        <div class="lesson-card land-card">
+            <div class="lesson-emoji">🏔️</div>
+            <h3>Wilayah Daratan</h3>
+            <p>Bagian permukaan bumi yang tidak tertutup air laut.</p>
+            <ul>
+                <li>Pulau Sumatra</li>
+                <li>Pulau Jawa</li>
+                <li>Pulau Kalimantan</li>
+                <li>Pulau Sulawesi</li>
+                <li>Pulau Papua</li>
+            </ul>
+        </div>
+
+        <div class="lesson-card sea-card">
+            <div class="lesson-emoji">🌊</div>
+            <h3>Wilayah Lautan</h3>
+            <p>Wilayah perairan yang menghubungkan pulau-pulau Indonesia.</p>
+            <ul>
+                <li>Laut Jawa</li>
+                <li>Laut Banda</li>
+                <li>Laut Arafura</li>
+                <li>Laut Sulawesi</li>
+                <li>Selat Sunda</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-banner">
+        <h3>💡 Tahukah Kamu?</h3>
+        <p>Selat adalah perairan sempit yang memisahkan dua pulau atau menghubungkan dua perairan.</p>
+        <p>Contoh: Selat Sunda berada di antara Pulau Jawa dan Sumatra.</p>
+    </div>
+</section>
+
+<!-- KHATULISTIWA -->
+<section class="page" id="khatulistiwa">
+    <h2 class="page-title">🌞 Posisi Indonesia dan Garis Khatulistiwa</h2>
+
+    <div class="lesson-card">
+        <div class="lesson-emoji">🌍</div>
+        <h3>Apa itu garis khatulistiwa?</h3>
+        <p>
+            Garis khatulistiwa adalah garis khayal yang membagi bumi
+            menjadi belahan bumi utara dan belahan bumi selatan.
+        </p>
+    </div>
+
+    <div class="earth-illustration">
+        <div class="earth">
+            <div class="earth-equator"></div>
+            <span class="north">UTARA</span>
+            <span class="south">SELATAN</span>
+        </div>
+        <p>Garis khatulistiwa berada pada lintang 0°.</p>
+    </div>
+
+    <div class="card-grid">
+        <div class="feature-card blue">
+            <h3>📍 Letak Astronomis</h3>
+            <p>Indonesia terletak sekitar 6° LU – 11° LS dan 95° BT – 141° BT.</p>
+        </div>
+        <div class="feature-card green">
+            <h3>🌏 Letak Geografis</h3>
+            <p>Indonesia berada di antara Benua Asia dan Australia serta Samudra Hindia dan Pasifik.</p>
+        </div>
+    </div>
+
+    <div class="info-banner">
+        <h3>🌤️ Pengaruh Letak Indonesia</h3>
+        <p>Indonesia memiliki iklim tropis dengan dua musim utama, yaitu musim hujan dan musim kemarau.</p>
+    </div>
+</section>
+
+<!-- MARITIM -->
+<section class="page" id="maritim">
+    <h2 class="page-title">🚢 Indonesia Negara Maritim</h2>
+
+    <div class="hero mini-hero">
+        <div>
+            <h2>Indonesia Kaya Laut 🌊</h2>
+            <p>Negara maritim adalah negara yang memiliki wilayah laut luas dan kehidupan masyarakatnya banyak berkaitan dengan laut.</p>
+        </div>
+        <div class="hero-art">🚢🐟</div>
+    </div>
+
+    <div class="card-grid">
+        <div class="feature-card blue">
+            <div class="feature-icon">🎣</div>
+            <h3>Nelayan</h3>
+            <p>Menangkap ikan sebagai sumber penghasilan dan bahan pangan.</p>
+        </div>
+        <div class="feature-card blue">
+            <div class="feature-icon">⚓</div>
+            <h3>Pelabuhan</h3>
+            <p>Tempat kapal bersandar dan kegiatan bongkar muat barang.</p>
+        </div>
+        <div class="feature-card blue">
+            <div class="feature-icon">🐠</div>
+            <h3>Perikanan</h3>
+            <p>Kegiatan menangkap dan membudidayakan ikan.</p>
+        </div>
+        <div class="feature-card blue">
+            <div class="feature-icon">🛥️</div>
+            <h3>Transportasi Laut</h3>
+            <p>Menghubungkan pulau-pulau melalui jalur laut.</p>
+        </div>
+    </div>
+</section>
+
+<!-- AGRARIS -->
+<section class="page" id="agraris">
+    <h2 class="page-title">🌾 Indonesia Negara Agraris</h2>
+
+    <div class="hero mini-hero agraris-hero">
+        <div>
+            <h2>Indonesia Kaya Hasil Bumi 🌱</h2>
+            <p>Negara agraris adalah negara yang kegiatan masyarakatnya banyak bergantung pada pertanian dan pengolahan hasil bumi.</p>
+        </div>
+        <div class="hero-art">🌾🚜</div>
+    </div>
+
+    <div class="card-grid">
+        <div class="feature-card green">
+            <div class="feature-icon">👨‍🌾</div>
+            <h3>Petani</h3>
+            <p>Mengolah lahan untuk menghasilkan bahan pangan.</p>
+        </div>
+        <div class="feature-card green">
+            <div class="feature-icon">🌾</div>
+            <h3>Persawahan</h3>
+            <p>Menghasilkan padi yang diolah menjadi beras.</p>
+        </div>
+        <div class="feature-card green">
+            <div class="feature-icon">☕</div>
+            <h3>Perkebunan</h3>
+            <p>Menghasilkan kopi, teh, kelapa sawit, dan karet.</p>
+        </div>
+        <div class="feature-card green">
+            <div class="feature-icon">🥬</div>
+            <h3>Hortikultura</h3>
+            <p>Menghasilkan sayuran, buah-buahan, dan tanaman lainnya.</p>
+        </div>
+    </div>
+</section>
+
+<!-- GAME -->
+<section class="page" id="game">
+    <h2 class="page-title">🎮 Game: Daratan atau Lautan?</h2>
+    <p class="subtitle">Pilih kelompok yang sesuai dengan gambar atau aktivitas berikut.</p>
+
+    <div class="game-box">
+        <div class="game-progress">
+            <span id="gameCounter">Soal 1 dari 8</span>
+            <span>⭐ Skor: <b id="gameScore">0</b></span>
+        </div>
+
+        <div class="game-question">
+            <div id="gameEmoji" class="game-emoji">🏝️</div>
+            <h3 id="gameQuestion">Pulau Kalimantan termasuk wilayah...</h3>
+        </div>
+
+        <div class="answer-buttons">
+            <button onclick="answerGame('daratan')" class="answer-btn">🏝️ DARATAN</button>
+            <button onclick="answerGame('lautan')" class="answer-btn">🌊 LAUTAN</button>
+        </div>
+
+        <div id="gameFeedback" class="feedback"></div>
+        <button id="nextGame" class="primary-btn hidden" onclick="nextGameQuestion()">Soal Berikutnya ➜</button>
+        <button id="restartGame" class="primary-btn hidden" onclick="restartGame()">🔄 Main Lagi</button>
+    </div>
+</section>
+
+<!-- KUIS -->
+<section class="page" id="kuis">
+    <h2 class="page-title">📝 Kuis Evaluasi</h2>
+    <p class="subtitle">Uji pemahamanmu tentang Indonesia!</p>
+
+    <div class="quiz-box">
+        <div class="game-progress">
+            <span id="quizCounter">Pertanyaan 1 dari 10</span>
+            <span>⭐ Skor: <b id="quizScore">0</b></span>
+        </div>
+
+        <h3 id="quizQuestion">Pertanyaan kuis</h3>
+        <div id="quizOptions" class="quiz-options"></div>
+        <div id="quizFeedback" class="feedback"></div>
+        <button id="nextQuiz" class="primary-btn hidden" onclick="nextQuizQuestion()">Lanjut ➜</button>
+
+        <div id="quizResult" class="result-box hidden">
+            <div class="result-star">🏆</div>
+            <h2>Kuis Selesai!</h2>
+            <p id="finalScore"></p>
+            <p id="finalMessage"></p>
+            <button class="primary-btn" onclick="restartQuiz()">Ulangi Kuis 🔄</button>
+        </div>
+    </div>
+</section>
+
+<!-- REFLEKSI -->
+<section class="page" id="refleksi">
+    <h2 class="page-title">💭 Refleksi Pembelajaran</h2>
+    <p class="subtitle">Ceritakan pengalaman belajarmu hari ini.</p>
+
+    <div class="reflection-box">
+        <label for="reflection1">1. Apa hal baru yang saya ketahui tentang Indonesia?</label>
+        <textarea id="reflection1" placeholder="Tuliskan jawabanmu..."></textarea>
+
+        <label for="reflection2">2. Apa perbedaan daratan dan lautan?</label>
+        <textarea id="reflection2" placeholder="Tuliskan jawabanmu..."></textarea>
+
+        <label for="reflection3">3. Mengapa wilayah laut penting bagi Indonesia?</label>
+        <textarea id="reflection3" placeholder="Tuliskan jawabanmu..."></textarea>
+
+        <label for="reflection4">4. Bagaimana perasaan saya belajar menggunakan peta digital?</label>
+        <select id="reflection4">
+            <option value="">Pilih perasaanmu</option>
+            <option>😄 Sangat senang</option>
+            <option>🙂 Senang</option>
+            <option>😐 Biasa saja</option>
+            <option>🤔 Masih perlu belajar</option>
+        </select>
+
+        <button class="primary-btn" onclick="saveReflection()">💾 Simpan Refleksi</button>
+        <button class="secondary-btn" onclick="printReflection()">🖨️ Cetak Refleksi</button>
+        <p id="reflectionMessage"></p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>🇮🇩 Jelajah Peta Indonesia | Media Pembelajaran IPAS Kelas 5</p>
+    <p>Belajar • Mengamati • Berdiskusi • Berkarya</p>
+</footer>
+
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
